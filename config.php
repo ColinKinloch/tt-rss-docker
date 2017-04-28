@@ -4,9 +4,9 @@
 	// *******************************************
 
 	define('DB_TYPE', 'pgsql');
-	define('DB_HOST', '');
-	define('DB_USER', 'fox');
-	define('DB_NAME', 'fox');
+	define('DB_HOST', 'postgres');
+	define('DB_USER', 'tt-rss');
+	define('DB_NAME', 'tt-rss');
 	define('DB_PASS', '');
 	define('DB_PORT', '');
 

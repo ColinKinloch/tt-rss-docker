@@ -1,0 +1,23 @@
+version: '2'
+
+volumes:
+  postgres-data:
+services:
+  postgres:
+    image: 'postgres:9-alpine'
+    volumes:
+      - 'postgres-data:/var/lib/postgresql/data'
+    env_file:
+      - common.env
+      - postgres.env
+    expose:
+      - '5432'
+  tt_rss:
+    build:
+      context: .
+    ports:
+      - "8080:80"
+    env_file:
+      - common.env
+    links:
+      - postgres
